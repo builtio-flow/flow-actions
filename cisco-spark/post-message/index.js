@@ -20,17 +20,7 @@ module.exports = function () {
                 "type": "string",
                 "title": "Room ID",
                 "description": "Enter the room ID",
-                "minLength": 1,
-                "lookup": {
-                    "id": "s1",
-                    "service": "spark",
-                    "auth": "oauth",
-                    "enabled": true,
-                    "searchable": true,
-                    "dependencies": [
-                        "access_token"
-                    ]
-                }
+                "minLength": 1
             },
             "messageType": {
                 "type": "string",
