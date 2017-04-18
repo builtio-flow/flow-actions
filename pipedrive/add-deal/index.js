@@ -406,18 +406,10 @@ module.exports = function(){
         if(input.visible_to == 'Entire company'){
             body.visible_to = 3;
         }
-        if(input.status == "open"){
+        if(input.status.match(/^open|won|lost|deleted$/g)){
             body.status = input.status;
         }
-        if(input.status == "won"){
-            body.status = input.status;
-        }
-        if(input.status == "lost"){
-            body.status = input.status;
-        }
-        if(input.status == "deleted"){
-            body.status = input.status;
-        }
+
         if(input.add_time){
             var pattern = /^\d{4}-\d{1,2}-\d{1,2}\T\d{1,2}:\d{1,2}:\d{1,2}.\d{1,3}\Z+$/.test(input.add_time);
             if(pattern == false){
