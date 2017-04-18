@@ -160,7 +160,7 @@ module.exports = function() {
                 }
                 return output(null, body);
             }
-            return output(null, body);
+            return output(body);
         });
     }
 };
